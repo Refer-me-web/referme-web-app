@@ -54,10 +54,9 @@ const Sidebar = () => {
             <Divider sx={{ border: '1px solid gray ' }} />
             <Box sx={{ height: '70%', overflow: 'scroll', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }}>
                 {contactDetails.map((oneDetail, index) => (
-                    <>
                         <Box sx={{ display: 'flex', alignItems: 'center', margin: '1rem' }} key={index}>
                             <Box>
-                                <ImageBox height={'10px'} width={'20px'}>
+                                <ImageBox key={index} height={'10px'} width={'20px'}>
                                     {iconMap[oneDetail?.imgKey]}
                                 </ImageBox>
                             </Box>
@@ -71,7 +70,6 @@ const Sidebar = () => {
 
                             </Box>
                         </Box>
-                    </>
                 )
                 )}
             </Box>
